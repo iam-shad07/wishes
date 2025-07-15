@@ -50,7 +50,7 @@ body {
 
 .glow_text:hover {
   
-	/* text-shadow:
+	text-shadow:
     0 0 5px rgb(255, 255, 255, 1),
 		0 0 10px rgb(255, 255, 255, 1),
 		0 0 20px rgb(255, 255, 255, 1),
@@ -59,13 +59,13 @@ body {
     0 1px cyan,
     1px 0 cyan,
     0 -1px cyan;
-  -webkit-text-stroke: 1px cyan; */
+  -webkit-text-stroke: 1px cyan;
  
-	text-shadow:
+/* 	text-shadow:
     0 0 5px rgb(255, 255, 255, 1),
 		0 0 10px rgb(255, 255, 255, 1),
 		0 0 20px rgb(255, 255, 255, 1),
-		0 0 30px rgb(255, 255, 255, 1);
+		0 0 30px rgb(255, 255, 255, 1); */
 }
 
 p.glow_text span.inner {
