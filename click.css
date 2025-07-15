@@ -1,0 +1,143 @@
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffe6f7;
+  text-align: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 40px;
+  border-radius: 16px;
+  animation: fadeIn 2s ease-in-out forwards;
+  opacity: 3;
+}
+
+.overlay-text h1 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: #ffb3ec;
+  text-shadow: 0 0 10px #ff99dd, 0 0 20px #cc66cc;
+}
+
+.overlay-text p {
+  font-size: 1.25rem;
+  margin: 8px 0;
+  line-height: 1.6;
+  text-shadow: 0 0 5px #ffc0f3, 0 0 10px #d46ad4;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 3;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  overflow-y: auto;
+  background-color: #0c0b0a; 
+  --sz: 3px; /*** size ***/
+  --sp: 10s; /*** speed ***/
+  --b1: #3c3532;
+  --b2: #1c1b18;
+  --b3: #0c0b0a;
+  --b4: #0c0b0ae0;
+  --c1: #e399ff;
+  --ts: 50%/calc(var(--sz) * 17.5) calc(var(--sz) * 29.5);
+}
+
+div {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200vh;
+  background:
+    /* black shadows */
+    radial-gradient(circle at 50% 50%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+    radial-gradient(circle at 0% 0%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+    radial-gradient(circle at 0% 100%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+    radial-gradient(circle at 100% 0%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+    radial-gradient(circle at 100% 100%, var(--b4) calc(var(--sz) * 1), #fff0 calc(var(--sz) * 8)) var(--ts),
+    /* border bottom */
+    conic-gradient(from 90deg at 97.5% 67%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts), /*repeated*/
+    conic-gradient(from 90deg at 97.5% 67%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts),
+    conic-gradient(from 182.5deg at 2.5% 67%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from 182.5deg at 2.5% 67%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), 
+    /* border top */
+    conic-gradient(from 270deg at 2.5% 33%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts), /*repeated*/
+    conic-gradient(from 270deg at 2.5% 33%, var(--c1) 0 87.5deg, #fff0 88deg 100%) var(--ts),
+    conic-gradient(from 2.5deg at 97.5% 33%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from 2.5deg at 97.5% 33%, #fff0 0 0deg, var(--c1) 0.5deg 90deg, #fff0 0 100%) var(--ts),
+    /* bottom */
+    conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from 116.5deg at 50% 85.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts),
+    conic-gradient(from 120deg at 50% 83%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+    /* top */
+    conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts), /*repeated*/
+    conic-gradient(from -63.5deg at 50% 14.5%, var(--b1) 0 127deg, #fff0 0 100%) var(--ts),
+    conic-gradient(from -60deg at 50% 17%, var(--c1) 0 120deg, #fff0 0 100%) var(--ts),
+    /* central gradient */
+    conic-gradient(
+      from 0deg at 50% 50%, #fff0 0 2deg, 
+      var(--b2) 2.5deg 57.5deg, 
+      #fff0 58deg 62.5deg, 
+      var(--b1) 63deg 117.5deg, 
+      #fff0 118deg 122.5deg, 
+      var(--b3) 123deg 177.5deg, 
+      #fff0 178deg 182deg, 
+      var(--b2) 182.5deg 237.5deg, 
+      #fff0 0 242.5deg, 
+      var(--b1) 243deg 297.5deg, 
+      #fff0 298deg 302.5deg, 
+      var(--b3) 303deg 357.5deg,
+      #fff0 358deg 360deg
+    ) var(--ts),
+    /* bg */
+    var(--c1);
+  animation: colors var(--sp) linear 0s infinite;
+  background-color: #0c0b0a;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+@keyframes colors {
+  100% { filter: hue-rotate(360deg); }
+}
+Run Pen
+
+
+Resources1× 0.5× 0.25×Rerun
+
+
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.birthday-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffb3ec;
+  box-shadow: 0 0 10px #ff99dd, 0 0 20px #cc66cc;
+  background-color: white;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .birthday-photo {
+    width: 90px;
+    height: 90px;
+  }
+}
